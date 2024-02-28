@@ -1,5 +1,6 @@
 package com.my.avocation.controller;
 
+import com.my.avocation.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,12 @@ public class MainController {
 
     @GetMapping("/user")
     public String users(Model model){
+        User user = new User();
+        user.setAge(10);
+        user.setName("hp");
+        model.addAttribute("name",user);
         return "user";
     }
+
+
 }
