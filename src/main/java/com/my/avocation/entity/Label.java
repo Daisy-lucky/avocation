@@ -1,8 +1,17 @@
 package com.my.avocation.entity;
 
+import jakarta.persistence.*;
+
+
+@Entity
+@Table(name = "label")
 public class Label {
+
+    @Id
     private int id;
 
+
+    private String description;
     public int getId() {
         return id;
     }
@@ -19,7 +28,7 @@ public class Label {
         this.description = description;
     }
 
-    private String description;
+
 
 
 }
