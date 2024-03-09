@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-//可选，指定实体类的位置，不写则扫描全目录
+//可选，指定实体类的位置，不写则扫描全目录..
 @EnableJpaRepositories(basePackages = {"com.my.avocation.utils"})
 //可选，同上扫描repository
 @EntityScan(basePackages = "com.my.avocation.entity")
