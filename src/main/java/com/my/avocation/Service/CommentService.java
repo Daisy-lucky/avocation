@@ -2,7 +2,7 @@ package com.my.avocation.Service;
 
 
 import com.my.avocation.entity.Comment;
-import com.my.avocation.utils.CommentRepository;
+import com.my.avocation.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

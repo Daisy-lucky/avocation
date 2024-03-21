@@ -2,7 +2,7 @@ package com.my.avocation.controller;
 
 import com.my.avocation.Service.CommentService;
 import com.my.avocation.entity.Label;
-import com.my.avocation.utils.LabelRepository;
+import com.my.avocation.repository.LabelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

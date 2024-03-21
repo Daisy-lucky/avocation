@@ -1,4 +1,4 @@
-package com.my.avocation.utils;
+package com.my.avocation.repository;
 
 import com.my.avocation.entity.Label;
 import org.springframework.data.jpa.repository.JpaRepository;
