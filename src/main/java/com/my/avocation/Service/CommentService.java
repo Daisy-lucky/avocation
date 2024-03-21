@@ -2,7 +2,6 @@ package com.my.avocation.Service;
 
 
 import com.my.avocation.entity.Comment;
-import com.my.avocation.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +10,6 @@ import java.sql.Date;
 @Service
 public class CommentService {
 
-    @Autowired
-    private CommentRepository cr;
 
 
     public void addComment(){
@@ -20,7 +17,7 @@ public class CommentService {
         comment.setContent("test");
         comment.setRootCommentId(0);
         comment.setCreateTime(new Date(System.currentTimeMillis()));
-        cr.save(comment);
+
 
         //cr.save(new Comment(comment));
     }
