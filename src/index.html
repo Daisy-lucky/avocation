@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>实时比特币价格</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #price {
+            font-size: 24px;
+            color: #f7931a;  /* 比特币橙色 */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>实时比特币价格</h1>
+    <div id="price">加载中...</div>
+
+    <script>
+        // 使用 CoinGecko 的免费 API
+        const API_URL = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
+
+        // 获取价格并更新页面
+        async function fetchBitcoinPrice() {
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                const price = data.bitcoin.usd;
+                document.getElementById("price").innerHTML = `$${price}`;
+            } catch (error) {
+                console.error("获取价格失败:", error);
+                document.getElementById("price").innerHTML = "更新失败";
+            }
+        }
+
+        // 初始加载 + 每 10 秒更新一次
+        fetchBitcoinPrice();
+        setInterval(fetchBitcoinPrice, 10000);
+    </script>
+</body>
+</html>
